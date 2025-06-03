@@ -12,12 +12,11 @@ A simple Android application (Java) that allows users to browse a list of books,
 4. [Screenshots](#screenshots)  
 5. [Getting Started](#getting-started)  
    - [Prerequisites](#prerequisites)  
-   - [Project Structure](#project-structure)  
+   - [Project Directory Structure](#project-directory-structure)  
    - [Setup & Run](#setup--run)  
 6. [JSON Data](#json-data)  
 7. [Room Persistence](#room-persistence)  
-8. [Usage](#usage)  
-9. [License](#license)  
+8. [Demo](#demo)  
 
 ---
 
@@ -113,7 +112,7 @@ This project follows **MVVM (Model-View-ViewModel)** with a clear separation of 
 
 ## Tech Stack
 
-- **Language**: Java (no Kotlin)  
+- **Language**: Java   
 - **Networking/Parsing**:  
   - Gson (manual JSON parsing from assets)  
 - **Persistence**:  
@@ -132,23 +131,33 @@ This project follows **MVVM (Model-View-ViewModel)** with a clear separation of 
 
 1. **Book List UI (Online)**    
 
-![Book List UI Online](https://github.com/user-attachments/assets/3b6d7b46-4aaa-41be-8ea7-49e6d45d398f)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3b6d7b46-4aaa-41be-8ea7-49e6d45d398f" width="360" alt="Book List UI Online" />
+</p>
 
 2. **Book List UI (Offline)**   
 
-![Book List UI offline](https://github.com/user-attachments/assets/0c2787d5-8cfb-45d7-8b96-74c84e71c665)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/0c2787d5-8cfb-45d7-8b96-74c84e71c665" width="360" alt="Book List UI Offline" />
+</p>
 
 3. **Empty Favorites**  
-   ![Empty Favorites](screenshots/empty_favorites.png)  
 
-4. **Book Detail (Not Favorited)**  
-   ![Book Detail](screenshots/book_detail.png)  
+<p align="center">
+<img src="https://github.com/user-attachments/assets/f6261d93-9e17-41f4-b158-ddf14521c016" width="360" alt="Empty Favorites" />
+</p>
 
-5. **Book Detail (Favorited)**  
-   ![Book Detail Favorited](screenshots/book_detail_favorited.png)  
+4. **Book Detail UI**  
 
-6. **Favorites List (Some Favorites)**  
-   ![Favorites List](screenshots/favorites_list.png)  
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e741fe90-d0fb-4a96-be7f-802048830c29" width="360" alt="Book Detail UI" />
+</p>
+
+5. **Favorites List UI**  
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/20809d07-e8b1-4075-8fc7-cfd47db7ebe3" width="360" alt="Bookmarks List UI" />
+</p>
 
 ---
 
@@ -160,6 +169,113 @@ This project follows **MVVM (Model-View-ViewModel)** with a clear separation of 
 - JDK 11 (or higher) installed  
 - Android SDK Platform 33 (or match `compileSdkVersion`)
 
-### Project Structure
+### Project Directory Structure
+
+```text
+BookReviewApp/
+ ├── app/
+ │    ├── src/
+ │    │    ├── main/
+ │    │    │    ├── assets/
+ │    │    │    │    └── books.json
+ │    │    │    ├── java/com/example/bookreviewapp/
+ │    │    │    │    ├── data/
+ │    │    │    │    │    ├── api/BookApiService.java
+ │    │    │    │    │    ├── local/
+ │    │    │    │    │    │    ├── AppDatabase.java
+ │    │    │    │    │    │    ├── dao/FavoriteBookDao.java
+ │    │    │    │    │    │    └── entity/FavoriteBook.java
+ │    │    │    │    │    └── model/Book.java
+ │    │    │    │    ├── repository/
+ │    │    │    │    │    └── BookRepositoryImpl.java
+ │    │    │    │    │    └── BookRepository.java
+ │    │    │    │    ├── viewmodel/
+ │    │    │    │    │    ├── BookListViewModel.java
+ │    │    │    │    │    └── BookDetailViewModel.java
+ │    │    │    │    └── ui/
+ │    │    │    │         ├── booklist/
+ │    │    │    │         │     ├── BookListActivity.java
+ │    │    │    │         │     └── BookListAdapter.java
+ │    │    │    │         └── bookdetail/
+ │    │    │    │               └── BookDetailActivity.java
+ │    │    │    └── res/
+ │    │    │         ├── layout/
+ │    │    │         │    ├── activity_book_list.xml
+ │    │    │         │    ├── item_book_list.xml
+ │    │    │         │    └── activity_book_detail.xml
+ │    │    │         ├── drawable/
+ │    │    │         │    └── ic_book_placeholder.xml
+ |    |    |         |    |__ ic_baseline_bookmark_24.xml
+ |    |    |         |    |__ ic_baseline_bookmark_border_24.xml
+ │    │    │         └── menu/
+ │    │    │              └── menu_book_list.xml
+ │    │    └── AndroidManifest.xml
+ │    └── build.gradle   (Module: app)
+ ├── build.gradle       (Project)
+ └── settings.gradle
+```
 
 
+### Setup & Run
+
+1. **Clone the repository**  
+
+   ```bash
+   git clone https://github.com/Susmm/Android_Assignment-1.git
+   cd Android_Assignment-1/BookReviewApplication
+
+3. **Open in Android Studio**
+
+   - Launch Android Studio → **Open an Existing Project** → select the cloned folder.
+   - Wait for Gradle to sync.
+
+4. **Ensure Permissions**
+
+   - In `AndroidManifest.xml`, verify:
+   
+   ```bash
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   ```
+
+6. **Build & Run**
+
+   - **Clean Project** → **Rebuild Project**.
+   - Connect an emulator or physical device (API 21+).
+   - Click Run ▶.
+  
+### JSON Data
+
+   All book data is stored locally in:
+
+   ```bash
+   app/src/main/assets/books.json
+   ```
+
+   This file contains an array of 10 book objects, each with:
+   - `id` (integer)
+   - `title` (string)
+   - `author` (string)
+   - `thumbnailUrl` (string URL)
+   - `description` (string)
+   - `rating` (float)
+   - `imageUrl` (string URL)
+
+   On app startup (if online), `BookRepositoryImpl` reads and parses this file using Gson into a `List<Book>`. The `RecyclerView` adapter then displays these entries.
+
+### Room Persistence
+
+   - **Entity**: `FavoriteBook` (maps one‐to‐one with `Book`)
+
+   - **DAO**: `FavoriteBookDao` provides:
+        
+        - `LiveData<List<FavoriteBook>> getAllFavorites()`
+        - `LiveData<FavoriteBook> getFavoriteById(int bookId)`
+        - `@Insert` and `@Delete` methods
+
+   - **Database**: `AppDatabase` (singleton) extends `RoomDatabase`
+
+       - On “Add to Favorites,” an `AsyncTask` inserts a `FavoriteBook` row. On “Remove,” it deletes it. Favorite lists are observed via LiveData.
+
+### Demo
+
+   <p align="center"><img source="https://github.com/user-attachments/assets/1d794e11-3f34-47bd-9f04-0c2475f324b6" alt="App Demo"/></p>
