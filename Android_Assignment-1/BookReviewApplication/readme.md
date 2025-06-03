@@ -278,4 +278,4 @@ BookReviewApp/
 
 ### Demo
 
-   <p align="center"><img source="https://github.com/user-attachments/assets/1d794e11-3f34-47bd-9f04-0c2475f324b6" alt="App Demo"/></p>
+   <p align="center"><img src="https://github.com/user-attachments/assets/1d794e11-3f34-47bd-9f04-0c2475f324b6" alt="App Demo"/></p>
