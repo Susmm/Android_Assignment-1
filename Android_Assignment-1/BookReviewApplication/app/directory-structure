@@ -1,0 +1,45 @@
+App is crashing upon opening
+
+BookReviewApp/
+ ├── app/
+ │    ├── src/
+ │    │    ├── main/
+ │    │    │    ├── assets/
+ │    │    │    │    └── books.json
+ │    │    │    ├── java/com/example/bookreviewapp/
+ │    │    │    │    ├── data/
+ │    │    │    │    │    ├── api/BookApiService.java
+ │    │    │    │    │    ├── local/
+ │    │    │    │    │    │    ├── AppDatabase.java
+ │    │    │    │    │    │    ├── dao/FavoriteBookDao.java
+ │    │    │    │    │    │    └── entity/FavoriteBook.java
+ │    │    │    │    │    └── model/Book.java
+ │    │    │    │    ├── repository/
+ │    │    │    │    │    └── BookRepositoryImpl.java
+ │    │    │    │    │    └── BookRepository.java
+ │    │    │    │    ├── viewmodel/
+ │    │    │    │    │    ├── BookListViewModel.java
+ │    │    │    │    │    └── BookDetailViewModel.java
+ │    │    │    │    └── ui/
+ │    │    │    │         ├── booklist/
+ │    │    │    │         │     ├── BookListActivity.java
+ │    │    │    │         │     └── BookListAdapter.java
+ │    │    │    │         └── bookdetail/
+ │    │    │    │               └── BookDetailActivity.java
+ │    │    │    └── res/
+ │    │    │         ├── layout/
+ │    │    │         │    ├── activity_book_list.xml
+ │    │    │         │    ├── item_book_list.xml
+ │    │    │         │    └── activity_book_detail.xml
+ │    │    │         ├── drawable/
+ │    │    │         │    └── ic_book_placeholder.xml (or .png)
+ |    |    |         |    |__ ic_launcher_background.xml
+ |    |    |         |    |__ ic_launcher_foreground.xml
+ │    │    │         └── values/
+ │    │    │              └── strings.xml, colors.xml, styles.xml, etc.
+ │    │    └── AndroidManifest.xml
+ │    └── build.gradle   (Module: app)
+ ├── build.gradle       (Project)
+ └── settings.gradle
+
+this is my directory structure

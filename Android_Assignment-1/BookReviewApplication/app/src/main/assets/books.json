@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A portrait of the Jazz Age in all of its decadence and excess.",
+    "rating": 4.2,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "author": "George Orwell",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism.",
+    "rating": 4.6,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 3,
+    "title": "Midnight’s Children",
+    "author": "Salman Rushdie",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "Born at the stroke of India’s independence, Saleem Sinai’s life parallels the tumult of his newly‐free nation.",
+    "rating": 4.1,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 4,
+    "title": "The God of Small Things",
+    "author": "Arundhati Roy",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A lyrical exploration of family, forbidden love, and social taboos set in Kerala, India.",
+    "rating": 4.0,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 5,
+    "title": "The White Tiger",
+    "author": "Aravind Adiga",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A darkly comic critique of modern India’s class struggle, told through the eyes of a village chauffeur.",
+    "rating": 4.3,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 6,
+    "title": "Train to Pakistan",
+    "author": "Khushwant Singh",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A poignant novel about the horrors and humanity of the 1947 Partition, set in a small Punjab village.",
+    "rating": 4.4,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 7,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A witty exploration of manners, marriage, and misconceptions in 19th‐century England.",
+    "rating": 4.5,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 8,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A powerful coming‐of‐age story confronting racial injustice in the Deep South of the 1930s.",
+    "rating": 4.8,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 9,
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A sweeping multi‐generational saga blending magical realism and Latin American history in the town of Macondo.",
+    "rating": 4.7,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  },
+  {
+    "id": 10,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "thumbnailUrl": "https://via.placeholder.com/100x150",
+    "description": "A heart‐wrenching story of friendship, betrayal, and redemption spanning pre‐Taliban Afghanistan.",
+    "rating": 4.6,
+    "imageUrl": "https://via.placeholder.com/300x450"
+  }
+]
